@@ -1,0 +1,12 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: city-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
